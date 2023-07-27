@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var idade = [[2],[2]];
+        
+    function lerIdade (){
+    
+        for (var linha=0;linha<2;linha++){
+            for ( var coluna = 0;coluna<2;coluna++){
+                idade [linha][coluna] = Number(prompt("Digite uma idade"));
+
+            }
+        }
+    }
+
+    function exibirIdade (){
+        for (var linha=0;linha<2;linha++){
+            for ( var coluna = 0;coluna<2;coluna++){
+                document.write(idade[linha][coluna] + " ")
+        
+            }
+        document.write(" <br> ")
+        
+        }
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Inserir Idade" onclick="lerIdade()"><br/>
+    <input type="button" value="ler idade" onclick="exibirIdade()"><br/>
+
+    
+    
+</body>
+</html>

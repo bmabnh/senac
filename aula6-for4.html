@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // FAÇA UM PROGRAMA QUE LEIA O NOME E 2 NOTAS DO ALUNO 
+        // DE 3 ALUNOS, CALCULE A MEDIA FINAL, IMPRIMA O NOME
+        // E A MEDIA DE CADA UM DOS ALUNOS 
+
+        var nome, nota1=0, nota2=0, media=0
+        
+        for (i=0; i<=2; i++){
+            nome=prompt("Digite seu nome")
+            nota1=Number(prompt("digite sua nota"))
+            nota2=Number(prompt("Digite sua nota"))
+            media=(nota1+nota2)/2
+            document.write(`O aluno -  ${nome}<br>Nota1: ${nota1}<br>Nota2:  ${nota2}<br>Media:  ${media}<br>`)
+            document.write(`**************************************<br>`)
+            
+        }
+
+    </script>
+    
+</body>
+</html>

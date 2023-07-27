@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* 1- FAÇA UM ALGORITIMO QUE INFORME PARA O CLIENTE DE UMA LOJA DE PISOS,
+         QUANTOS METROS DE PISOS SERAO NESCESSARIOS COMPRAR PARA CONSEGUIR ATENDER TODO O AMBIENTE.
+         LEVANDO EM CONSIDERAÇÃO QUE CADA CAIXA DE PISO POSSUI 2 METROS QUADRADOS DE PISO.
+          PARA ISTO, O CLIENTE DEVERÁ INFORMAR A METRAGEM DO AMBIENTE (AMBIENTE -> 5 = 35)   
+          O CLIENTE DEVERÁ ESCOLHER ENTRE A QUALIDADE  DOS TIPOS DE PISOS EXISTENTES: TIPO 1 E TIPO 2.
+          O ALGORITIMO DEVERÁ VERIFICAR O TIPO DE PISO ESCOLHIDO. SE A QUANTIDADE DE CAIXAS DO TIPO 1 
+          FOR MAIOR OU IGUAL A 20, TERÁ DESCONTO DE 10%, CASO CONTRÁRIO, TERÁ DESCONTO DE 5%
+          SE A QUANTIDADE DE CAIXAS DO TIPO 2 FOR MAIOR OU IGUAL A 20, TERÁ DESCONTO DE 12%,
+          CASP CONTRARIO, TERA DESCONTO DE 8%
+          TIPO 1 É R$20 O METRO QUADRADO
+          TIPO 2 É R$25 O METRO QUADRADO
+          AO FINAL IMPRIMA O TIPO DE PISO ESCOLHIDO, A QUANTIDADE NESCESSARA PARA O AMBIENTE,
+          O VALOR CHEIO E O VALOR COM DESCONTO 
+          */
+
+        const preco_piso1 = 40
+        const preco_piso2 = 50 
+        const piso = 2
+        var compremento=0,  metroQuadrado = 0
+        var largura=0 
+        var pisocx  = 0
+        var tipo_piso
+        var valor_desconto
+        var valor_final
+              
+        compremento = Number(prompt("Digite o comprimento "))
+        largura = Number(prompt("Digite a Largura"))
+
+        metroQuadrado = compremento*largura
+        pisocx = metroQuadrado / piso
+
+        document.write(`O metro quadrado do seu ambiente é de ${metroQuadrado} m²<BR>`)
+        document.write(`Você precisará de ${pisocx} m² de piso<BR>`)
+         
+        tipo_piso = Number(prompt(`escolha o tipo de piso ( Tipo 1 ou Tipo 2 ):`))
+
+        switch (tipo_piso){
+            case 1:
+             valor_cheio = preco_piso1*pisocx
+             if (pisocx >=20){
+                valor_desconto = valor_cheio*0.10
+                valor_final = valor_cheio - valor_desconto
+             }
+             else {
+                valor_desconto=valor_cheio *0.05
+             }
+             break;
+             case 2:
+                valor_cheio= preco_piso2*pisocx
+                if (pisocx >= 20) {
+                    valor_desconto = valor_cheio*0.12
+                    valor_final = valor_cheio - valor_desconto
+                }
+                else {
+                    valor_desconto=valor_cheio*0.08
+                }
+                break;
+
+                default:
+                    document.write("Esse tipo nao está disponivel")
+         }
+         document.write(` tipo de piso escolhido ${tipo_piso}`)
+         document.write(` valor cheio: R$${valor_cheio}<BR>`)
+         document.write(` valor com desconto: R$${valor_desconto}<BR>`)
+         document.write(` valor final: R$${valor_final}<BR>`)
+
+
+    </script>
+</body>
+</html>

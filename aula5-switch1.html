@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //VARIAVEIS
+        var 
+        votoPrefeito=0
+        votoVereador=0
+
+        votoVereador = Number(prompt("Digite seu voto para Vereador \n 10 - vanessa \n 20 - saturnino \n 30 - voto em branco"))
+        votoPrefeito = Number(prompt("Digite seu voto para prefeito \n 1 - Zé \n 2 - Ana \n 3 - Voto em branco"))
+        // SWITCH ... CASE.. BREAK . DEFAULT (PREFEITO)
+        switch(votoPrefeito){
+                case 1:  //nao aceita simbolos como = , >, >=... 
+                document.write(`Voce votou no zé para prefeito<br>`)
+                break
+                case 2: 
+                document.write(`voce votou na ana para prefeito<br>`)
+                break
+                case 3:
+                document.write(`voce votou em branco<br>`)
+                break
+                default:
+                document.write(`voce votou nulo<br>`)
+
+        }
+        // SWITCH ... CASE.. BREAK . DEFAULT (VEREADOR)
+        switch(votoVereador){
+            case 10:
+                document.write(`voce votou em Vanessa para vereador<br>`)
+                break
+                
+            case 20:
+                document.write(`voce votou em saturnino para vereador<br>`)
+                break
+                
+            case 30:
+                document.write(`voce votou em branco<br>`)
+                break
+                
+            default:
+                document.write(`voce votou nulo<br>`)    
+        }
+
+
+    </script>
+    
+</body>
+</html>
